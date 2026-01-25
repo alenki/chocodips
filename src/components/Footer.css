@@ -39,7 +39,7 @@
    ========================================================================== */
 
 .footer__main {
-  background: linear-gradient(180deg, var(--footer-brown) 0%, #4A3228 100%);
+  background: linear-gradient(180deg, var(--footer-brown) 0%, #251510 100%);
   padding: 4rem 0 2.5rem;
   position: relative;
   overflow: hidden;
