@@ -32,7 +32,7 @@ export default function Footer() {
               <div className="footer__address">
                 <p className="footer__address-label">Адрес</p>
                 <p className="footer__address-text">
-                  ул. Кабардинская, 162/1
+                  ул. Пушкина, 85а
                 </p>
                 <span className="footer__address-city">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -63,7 +63,7 @@ export default function Footer() {
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
                   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
                 </svg>
-                <span>@chocodips</span>
+                <span>@chocodips.ru</span>
               </a>
             </div>
           </div>

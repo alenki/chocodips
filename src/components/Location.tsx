@@ -6,7 +6,7 @@ import 'leaflet/dist/leaflet.css';
 import './Location.css';
 
 // Nalchik coordinates (city center area)
-const CAFE_COORDINATES: LatLngExpression = [43.4846, 43.6072];
+const CAFE_COORDINATES: LatLngExpression = [43.483088, 43.607469];
 
 // Fix for default Leaflet marker icon issue in bundlers
 // Create a simple SVG marker
@@ -49,9 +49,10 @@ export default function Location() {
           <div className="location__map-wrapper">
             <MapContainer
               center={CAFE_COORDINATES}
-              zoom={15}
+              zoom={18}
               scrollWheelZoom={false}
               className="location__map"
+              attributionControl={false}
             >
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -77,7 +78,7 @@ export default function Location() {
                 </svg>
                 <div>
                   <h3>Адрес</h3>
-                  <p>г. Нальчик, Кабардино-Балкария</p>
+                  <p>г. Нальчик, ул. Пушкина, 85а</p>
                 </div>
               </div>
 
@@ -89,8 +90,8 @@ export default function Location() {
                 <div>
                   <h3>Часы работы</h3>
                   <ul className="location__hours">
-                    <li><span>Пн — Пт</span><span>10:00 — 22:00</span></li>
-                    <li><span>Сб — Вс</span><span>11:00 — 23:00</span></li>
+                    <li><span>Ежедневно</span><span>10:00 — 23:00</span></li>
+                    <li><span>Кухня</span><span>10:00 — 22:15</span></li>
                   </ul>
                 </div>
               </div>
@@ -105,11 +106,11 @@ export default function Location() {
                   <h3>Мы в соцсетях</h3>
                   <p>
                     <a
-                      href="https://instagram.com/chocodips"
+                      href="https://instagram.com/chocodips.ru"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      @chocodips
+                      @chocodips.ru
                     </a>
                   </p>
                 </div>
