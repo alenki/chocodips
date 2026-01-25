@@ -16,8 +16,11 @@ You tend to converge toward generic, "on distribution" outputs. In frontend desi
 2. Let us start planning this website for the ChocoDips cafe in the city of Nalchik. It is a dessert cafe with a lot of chocolate in it's desserts. It has a cute minimalistic vibe and style. It's color pallete is perfectly represented in it's logo here @data/logo.png which I would want you to use where it is needed. Now by analyzing their current menu website made with taplink: https://taplink.cc/desserts07?tpclid=facebookPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnCebykfRFEldqHQ56hpn vlaeS41SYbF4e0TFixUrHGf_TWD3BiJCZqxnB_64_aem_FkKloF1laOaXSHcTHd_ZwA. 
 And their instagram: https://www.instagram.com/chocodips.ru/?hl=en. 
 Let us create a plan for this website that we're going to develop for them. 
-For now, get the menu items from their taplink website and use placeholder images.
-Use leaflet and openstreetmap for the map.
+**Key Moments**:
+- Language: Russian only
+- For now, get the menu items from their taplink website and use placeholder images.
+- Map: Leaflet + OpenStreetMap (no API key needed) 
+- Scope: Menu showcase + info (no ordering/reservations)   
 Keep in mind the frontend aesthetics idea in @README.md.
 Use the frontend-design and think deeply for this.  
 
