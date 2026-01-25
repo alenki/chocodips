@@ -13,7 +13,7 @@ You tend to converge toward generic, "on distribution" outputs. In frontend desi
 
 1. /init
 
-2. Let us start planning this website for the ChocoDips cafe in the city of Nalchik. It is a dessert cafe with a lot of chocolate in it's desserts. It has a cute minimalistic vibe and style. It's color pallete is perfectly represented in it's logo here @data/logo.png which I would want you to use where it is needed. Now by analyzing their current menu website made with taplink: https://taplink.cc/desserts07?tpclid=facebookPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnCebykfRFEldqHQ56hpn vlaeS41SYbF4e0TFixUrHGf_TWD3BiJCZqxnB_64_aem_FkKloF1laOaXSHcTHd_ZwA. 
+2. Let us start planning this website for the ChocoDips cafe in the city of Nalchik. It is a dessert cafe with a lot of chocolate in it's desserts. It has a cute minimalistic vibe and style. It's color pallete is perfectly represented in it's logo here @data/logo.png or the round version of it here @data/chocodips.jpg which I would want you to use where it is needed. Now by analyzing their current menu website made with taplink: https://taplink.cc/desserts07?tpclid=facebookPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnCebykfRFEldqHQ56hpn vlaeS41SYbF4e0TFixUrHGf_TWD3BiJCZqxnB_64_aem_FkKloF1laOaXSHcTHd_ZwA. 
 And their instagram: https://www.instagram.com/chocodips.ru/?hl=en. 
 Let us create a plan for this website that we're going to develop for them. 
 **Key Moments**:
