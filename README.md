@@ -18,7 +18,8 @@ And their instagram: https://www.instagram.com/chocodips.ru/?hl=en.
 Let us create a plan for this website that we're going to develop for them. 
 **Key Moments**:
 - Language: Russian only
-- For now, get the menu items from their taplink website and use placeholder images.
+- For now, get the menu items from their taplink website and use the images for them from @data/menu/.
+- As for other images, use placeholders for now
 - Map: Leaflet + OpenStreetMap (no API key needed) 
 - Scope: Menu showcase + info (no ordering/reservations)   
 Keep in mind the frontend aesthetics idea in @README.md.
