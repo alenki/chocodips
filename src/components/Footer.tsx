@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer__content">
           <a href="#hero" className="footer__logo">
-            <img src="/data/chocodips.jpg" alt="ChocoDips" />
+            <img src="/data/logo.png" alt="ChocoDips" />
           </a>
 
           <div className="footer__social">

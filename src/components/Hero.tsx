@@ -10,50 +10,83 @@ export default function Hero() {
 
   return (
     <section className="hero" id="hero">
-      {/* Decorative chocolate drips */}
-      <div className="hero__drips">
-        <svg className="hero__drip hero__drip--1" viewBox="0 0 40 120" fill="none">
-          <path d="M20 0C20 0 0 80 0 95C0 108.807 8.954 120 20 120C31.046 120 40 108.807 40 95C40 80 20 0 20 0Z" fill="currentColor"/>
-        </svg>
-        <svg className="hero__drip hero__drip--2" viewBox="0 0 30 90" fill="none">
-          <path d="M15 0C15 0 0 60 0 71.25C0 81.605 6.716 90 15 90C23.284 90 30 81.605 30 71.25C30 60 15 0 15 0Z" fill="currentColor"/>
-        </svg>
-        <svg className="hero__drip hero__drip--3" viewBox="0 0 35 100" fill="none">
-          <path d="M17.5 0C17.5 0 0 66.67 0 79.17C0 90.07 7.835 100 17.5 100C27.165 100 35 90.07 35 79.17C35 66.67 17.5 0 17.5 0Z" fill="currentColor"/>
-        </svg>
-        <svg className="hero__drip hero__drip--4" viewBox="0 0 25 75" fill="none">
-          <path d="M12.5 0C12.5 0 0 50 0 59.375C0 67.55 5.596 75 12.5 75C19.404 75 25 67.55 25 59.375C25 50 12.5 0 12.5 0Z" fill="currentColor"/>
-        </svg>
+      {/* Layered background elements */}
+      <div className="hero__bg">
+        <div className="hero__bg-gradient" />
+        <div className="hero__bg-pattern" />
+        <div className="hero__bg-glow" />
       </div>
 
-      <div className="hero__content container">
-        <div className="hero__logo-wrapper">
+      {/* Decorative chocolate swirl - left */}
+      <svg className="hero__swirl hero__swirl--left" viewBox="0 0 200 600" fill="none" aria-hidden="true">
+        <path
+          d="M180 0C180 0 200 100 160 180C120 260 40 280 60 380C80 480 180 520 160 600"
+          stroke="var(--chocolate)"
+          strokeWidth="3"
+          strokeLinecap="round"
+          opacity="0.15"
+        />
+        <circle cx="160" cy="600" r="8" fill="var(--chocolate)" opacity="0.2" />
+      </svg>
+
+      {/* Decorative chocolate swirl - right */}
+      <svg className="hero__swirl hero__swirl--right" viewBox="0 0 200 600" fill="none" aria-hidden="true">
+        <path
+          d="M20 0C20 0 0 120 50 200C100 280 180 320 150 420C120 520 20 560 40 600"
+          stroke="var(--chocolate)"
+          strokeWidth="3"
+          strokeLinecap="round"
+          opacity="0.15"
+        />
+        <circle cx="40" cy="600" r="8" fill="var(--chocolate)" opacity="0.2" />
+      </svg>
+
+      {/* Main content */}
+      <div className="hero__content">
+        {/* Floating accent dots */}
+        <div className="hero__accents" aria-hidden="true">
+          <span className="hero__dot hero__dot--1" />
+          <span className="hero__dot hero__dot--2" />
+          <span className="hero__dot hero__dot--3" />
+        </div>
+
+        {/* Logo */}
+        <div className="hero__logo-container">
           <img
             src="/data/logo.png"
-            alt="ChocoDips Logo"
+            alt="ChocoDips"
             className="hero__logo"
           />
         </div>
 
-        <p className="hero__tagline">
-          Шоколадные десерты с душой
-        </p>
+        {/* Tagline with decorative line */}
+        <div className="hero__tagline-wrapper">
+          <span className="hero__line" aria-hidden="true" />
+          <p className="hero__tagline">Шоколадные десерты с душой</p>
+          <span className="hero__line" aria-hidden="true" />
+        </div>
 
-        <p className="hero__subtitle">
-          Нальчик
-        </p>
+        {/* Location badge */}
+        <div className="hero__location">
+          <svg className="hero__location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>Нальчик</span>
+        </div>
 
-        <button className="btn btn-primary hero__cta" onClick={scrollToMenu}>
-          Смотреть меню
+        {/* CTA Button */}
+        <button className="hero__cta" onClick={scrollToMenu}>
+          <span className="hero__cta-text">Смотреть меню</span>
+          <svg className="hero__cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
         </button>
       </div>
 
-      {/* Decorative bottom wave */}
-      <div className="hero__wave">
-        <svg viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none">
-          <path d="M0 100V60C240 20 480 0 720 0C960 0 1200 20 1440 60V100H0Z" fill="var(--cream)"/>
-        </svg>
-      </div>
+      {/* Bottom fade to cream */}
+      <div className="hero__fade" aria-hidden="true" />
     </section>
   );
 }
