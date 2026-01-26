@@ -21,8 +21,11 @@ export default function Footer() {
             {/* Brand section */}
             <div className="footer__brand">
               <a href="#hero" className="footer__logo-link" aria-label="На главную">
-                <span className="footer__logo-choco">CHOCO</span>
-                <span className="footer__logo-dips">dips</span>
+                <img
+                  src="/data/logo_footer.png"
+                  alt="ChocoDips"
+                  className="footer__logo-img"
+                />
               </a>
               <p className="footer__tagline">Шоколадные десерты с душой</p>
             </div>
