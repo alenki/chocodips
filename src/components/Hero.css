@@ -136,8 +136,8 @@
 }
 
 .hero__dot--1 {
-  width: 12px;
-  height: 12px;
+  width: 24px;
+  height: 24px;
   background: var(--orange);
   opacity: 0.25;
   top: -40px;
@@ -146,8 +146,8 @@
 }
 
 .hero__dot--2 {
-  width: 8px;
-  height: 8px;
+  width: 18px;
+  height: 18px;
   background: var(--chocolate);
   opacity: 0.15;
   top: 20%;
@@ -156,8 +156,8 @@
 }
 
 .hero__dot--3 {
-  width: 16px;
-  height: 16px;
+  width: 32px;
+  height: 32px;
   background: var(--caramel);
   opacity: 0.12;
   bottom: 10%;
