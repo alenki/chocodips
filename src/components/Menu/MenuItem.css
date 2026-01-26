@@ -7,6 +7,7 @@
   opacity: 0;
   animation: menuItemFadeIn 0.5s ease forwards;
   animation-delay: var(--animation-delay, 0ms);
+  cursor: pointer;
 }
 
 @keyframes menuItemFadeIn {
