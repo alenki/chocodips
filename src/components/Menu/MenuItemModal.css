@@ -14,13 +14,9 @@ html.modal-open {
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  background: linear-gradient(
-    135deg,
-    rgba(74, 44, 26, 0.92) 0%,
-    rgba(45, 27, 16, 0.96) 100%
-  );
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(74, 44, 26, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   animation: modalOverlayIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   overscroll-behavior: contain;
   touch-action: none;
