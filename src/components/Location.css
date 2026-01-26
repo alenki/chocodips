@@ -104,7 +104,7 @@
 .location__card-item {
   display: flex;
   gap: 1rem;
-  padding: 1.25rem 0;
+  padding: 1.75rem 0;
   border-bottom: 1px solid #e8e4dc;
 }
 
@@ -127,7 +127,7 @@
 
 .location__card-item h3 {
   font-family: var(--font-serif);
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--chocolate);
   margin-bottom: 0.5rem;
@@ -187,6 +187,6 @@
   }
 
   .location__card-item {
-    padding: 1rem 0;
+    padding: 1.25rem 0;
   }
 }
