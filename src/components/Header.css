@@ -27,7 +27,7 @@
 .header__logo {
   display: flex;
   align-items: center;
-  height: 48px;
+  height: 40px;
   transition: transform var(--transition-fast);
   position: relative;
   z-index: 1001;
