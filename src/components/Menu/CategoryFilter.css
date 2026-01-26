@@ -37,7 +37,8 @@
 
 @media (max-width: 480px) {
   .category-filter {
-    gap: 0.5rem;
+    column-gap: 0.5rem;
+    row-gap: 1rem;
   }
 
   .category-filter__btn {
