@@ -318,8 +318,8 @@ html.modal-open {
 @media (max-width: 640px) {
   .modal-overlay {
     padding: 1rem;
-    padding-top: 2rem;
-    align-items: flex-start;
+    padding-bottom: 15vh;
+    align-items: center;
   }
 
   .modal-container {
