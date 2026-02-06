@@ -77,7 +77,7 @@ export default function Footer() {
               &copy; {currentYear} ChocoDips
             </p>
             <a
-              href="https://okaraf.ru"
+              href="https://okaraf.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
               className="footer__made-by"
