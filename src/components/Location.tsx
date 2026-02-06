@@ -42,7 +42,7 @@ export default function Location() {
             </svg>
             <span className="location__line"></span>
           </div>
-          <h2 className="location__title">Где нас найти</h2>
+          <h2 className="location__title">Find Us</h2>
         </header>
 
         <div className="location__content">
@@ -62,7 +62,7 @@ export default function Location() {
                 <Popup>
                   <div className="location__popup">
                     <strong>ChocoDips</strong>
-                    <span>Шоколадные десерты с душой</span>
+                    <span>Chocolate desserts with soul</span>
                   </div>
                 </Popup>
               </Marker>
@@ -77,8 +77,8 @@ export default function Location() {
                   <circle cx="12" cy="10" r="3"/>
                 </svg>
                 <div>
-                  <h3>Адрес</h3>
-                  <p>г. Нальчик, ул. Пушкина, 85а</p>
+                  <h3>Address</h3>
+                  <p>Nalchik, Pushkin St., 85a</p>
                 </div>
               </div>
 
@@ -88,10 +88,10 @@ export default function Location() {
                   <polyline points="12 6 12 12 16 14"/>
                 </svg>
                 <div>
-                  <h3>Часы работы</h3>
+                  <h3>Opening Hours</h3>
                   <ul className="location__hours">
-                    <li><span>Ежедневно</span><span>10:00 — 23:00</span></li>
-                    <li><span>Кухня</span><span>10:00 — 22:15</span></li>
+                    <li><span>Daily</span><span>10:00 — 23:00</span></li>
+                    <li><span>Kitchen</span><span>10:00 — 22:15</span></li>
                   </ul>
                 </div>
               </div>
@@ -103,7 +103,7 @@ export default function Location() {
                   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
                 </svg>
                 <div>
-                  <h3>Мы в соцсетях</h3>
+                  <h3>Follow Us</h3>
                   <p>
                     <a
                       href="https://instagram.com/chocodips.ru"

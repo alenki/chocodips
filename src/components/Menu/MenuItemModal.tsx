@@ -132,7 +132,7 @@ export default function MenuItemModal({ item, isOpen, onClose }: MenuItemModalPr
     >
       <div className="modal-container" onClick={(e) => e.stopPropagation()}>
         {/* Close button */}
-        <button className="modal-close" onClick={onClose} aria-label="Закрыть">
+        <button className="modal-close" onClick={onClose} aria-label="Close">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M18 6L6 18M6 6l12 12" />
           </svg>
@@ -152,7 +152,7 @@ export default function MenuItemModal({ item, isOpen, onClose }: MenuItemModalPr
               <div key={index} className="modal-slider__slide">
                 <img
                   src={src}
-                  alt={`${item.name} - фото ${index + 1}`}
+                  alt={`${item.name} - photo ${index + 1}`}
                   className="modal-slider__image"
                 />
               </div>
@@ -165,7 +165,7 @@ export default function MenuItemModal({ item, isOpen, onClose }: MenuItemModalPr
               <button
                 className="modal-slider__arrow modal-slider__arrow--prev"
                 onClick={prevSlide}
-                aria-label="Предыдущее фото"
+                aria-label="Previous photo"
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path d="M15 18l-6-6 6-6" />
@@ -174,7 +174,7 @@ export default function MenuItemModal({ item, isOpen, onClose }: MenuItemModalPr
               <button
                 className="modal-slider__arrow modal-slider__arrow--next"
                 onClick={nextSlide}
-                aria-label="Следующее фото"
+                aria-label="Next photo"
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path d="M9 18l6-6-6-6" />
@@ -191,7 +191,7 @@ export default function MenuItemModal({ item, isOpen, onClose }: MenuItemModalPr
                   key={index}
                   className={`modal-slider__dot ${index === currentSlide ? 'modal-slider__dot--active' : ''}`}
                   onClick={() => goToSlide(index)}
-                  aria-label={`Перейти к фото ${index + 1}`}
+                  aria-label={`Go to photo ${index + 1}`}
                 />
               ))}
             </div>

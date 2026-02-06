@@ -11,7 +11,7 @@ export default function CategoryFilter({ activeCategory, onCategoryChange }: Cat
   const categories: Array<MenuCategory | 'all'> = ['all', 'chocolate', 'crepes', 'pancakes', 'pastries', 'specialty'];
 
   const getLabel = (category: MenuCategory | 'all'): string => {
-    if (category === 'all') return 'Все';
+    if (category === 'all') return 'All';
     return categoryLabels[category];
   };
 

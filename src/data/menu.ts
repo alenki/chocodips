@@ -10,146 +10,146 @@ export interface MenuItem {
 }
 
 export const categoryLabels: Record<MenuCategory, string> = {
-  chocolate: 'Шоколад',
-  crepes: 'Крепы',
-  pancakes: 'Панкейки',
-  pastries: 'Выпечка',
-  specialty: 'Авторские'
+  chocolate: 'Chocolate',
+  crepes: 'Crepes',
+  pancakes: 'Pancakes',
+  pastries: 'Pastries',
+  specialty: 'Specialty'
 };
 
 export const menuItems: MenuItem[] = [
   {
     id: 'choco-bum',
-    name: 'ЧОКО БУМ',
-    description: 'Эффектный шоколадный взрыв — горячий десерт с жидким шоколадным сердцем',
+    name: 'CHOCO BOOM',
+    description: 'A spectacular chocolate explosion — a hot dessert with a molten chocolate heart',
     price: 600,
     category: 'chocolate',
     image: '/data/menu/ЧОКО БУМ/image_1.png'
   },
   {
     id: 'brownie-crep',
-    name: 'БРАУНИ-КРЕП',
-    description: 'Нежный креп с начинкой из шоколадного брауни и соусом',
+    name: 'BROWNIE CREPE',
+    description: 'A delicate crepe filled with chocolate brownie and drizzled with sauce',
     price: 390,
     category: 'crepes',
     image: '/data/menu/БРАУНИ-КРЕП/image_1.png'
   },
   {
     id: 'fondant',
-    name: 'ФОНДАН',
-    description: 'Классический французский десерт с жидким шоколадным центром',
+    name: 'FONDANT',
+    description: 'A classic French dessert with a molten chocolate center',
     price: 410,
     category: 'chocolate',
     image: '/data/menu/ФОНДАН/image_1.png'
   },
   {
     id: 'fondue',
-    name: 'ФОНДЮ',
-    description: 'Горячий шоколадный фондю с фруктами и маршмеллоу для макания',
+    name: 'FONDUE',
+    description: 'Hot chocolate fondue with fruits and marshmallows for dipping',
     price: 800,
     category: 'chocolate',
     image: '/data/menu/ФОНДЮ/image_1.png'
   },
   {
     id: 'pancakes-berries',
-    name: 'ПАНКЕЙКИ С ЯГОДАМИ',
-    description: 'Воздушные панкейки с сезонными ягодами и кремом',
+    name: 'PANCAKES WITH BERRIES',
+    description: 'Fluffy pancakes with seasonal berries and cream',
     price: 410,
     category: 'pancakes',
     image: '/data/menu/ПАНКЕЙКИ С ЯГОДАМИ/image_1.png'
   },
   {
     id: 'pancakes-chocolate',
-    name: 'ПАНКЕЙКИ С ШОКОЛАДОМ',
-    description: 'Воздушные панкейки с богатым шоколадным соусом',
+    name: 'PANCAKES WITH CHOCOLATE',
+    description: 'Fluffy pancakes with rich chocolate sauce',
     price: 410,
     category: 'pancakes',
     image: '/data/menu/ПАНКЕЙКИ С ШОКОЛАДОМ/image_1.png'
   },
   {
     id: 'crep-roll',
-    name: 'КРЕП-РОЛЛ',
-    description: 'Креп, свёрнутый в изящный ролл с начинкой на ваш выбор',
+    name: 'CREPE ROLL',
+    description: 'A crepe rolled into an elegant roll with your choice of filling',
     price: 435,
     category: 'crepes',
     image: '/data/menu/КРЕП-РОЛЛ/image_1.png'
   },
   {
     id: 'burrata',
-    name: 'БУРРАТА',
-    description: 'Нежный креп с итальянским сыром буррата и сладким соусом',
+    name: 'BURRATA',
+    description: 'A delicate crepe with Italian burrata cheese and sweet sauce',
     price: 390,
     category: 'crepes',
     image: '/data/menu/БУРРАТА/image_1.png'
   },
   {
     id: 'crep-banana-chocolate',
-    name: 'КРЕП С БАНАНОМ И ШОКОЛАДОМ',
-    description: 'Классическое сочетание — тонкий креп с бананом и горячим шоколадом',
+    name: 'BANANA CHOCOLATE CREPE',
+    description: 'A classic combination — a thin crepe with banana and hot chocolate',
     price: 400,
     category: 'crepes',
     image: '/data/menu/КРЕП С БАНАНОМ И ШОКОЛАДОМ/image_1.png'
   },
   {
     id: 'sushi-crep',
-    name: 'СУШИ КРЕП',
-    description: 'Креативная подача крепа в стиле суши с оригинальными топпингами',
+    name: 'SUSHI CREPE',
+    description: 'A creative sushi-style crepe presentation with unique toppings',
     price: 420,
     category: 'crepes',
     image: '/data/menu/СУШИ КРЕП/image_1.png'
   },
   {
     id: 'cinnabon',
-    name: 'СИННАБОН',
-    description: 'Ароматный булочка-рулет с корицей и сливочной глазурью',
+    name: 'CINNABON',
+    description: 'A fragrant cinnamon roll with creamy frosting',
     price: 330,
     category: 'pastries',
     image: '/data/menu/СИННАБОН/image_1.png'
   },
   {
     id: 'waffles',
-    name: 'ВАФЛИ',
-    description: 'Хрустящие бельгийские вафли с начинкой на выбор',
+    name: 'WAFFLES',
+    description: 'Crispy Belgian waffles with your choice of topping',
     price: 390,
     category: 'pastries',
     image: '/data/menu/ВАФЛИ/image_1.png'
   },
   {
     id: 'profiteroli-sable',
-    name: 'ПРОФИТРОЛИ SABLE',
-    description: 'Заварные пирожные с кремовой начинкой на песочном основании',
+    name: 'PROFITEROLES SABLE',
+    description: 'Choux pastries with a creamy filling on a shortbread base',
     price: 750,
     category: 'specialty',
     image: '/data/menu/ПРОФИТРОЛИ SABLE/image_1.png'
   },
   {
     id: 'profiteroli-big-sable',
-    name: 'ПРОФИТРОЛИ BIG SABLE',
-    description: 'Большая порция фирменных профитролей — идеально для компании',
+    name: 'PROFITEROLES BIG SABLE',
+    description: 'A large serving of signature profiteroles — perfect for sharing',
     price: 2500,
     category: 'specialty',
     image: '/data/menu/ПРОФИТРОЛИ BIG SABLE/image_1.png'
   },
   {
     id: 'cheesecake',
-    name: 'ЧИЗКЕЙК САН-САБАСТЬЯН',
-    description: 'Баскский чизкейк с карамелизированной корочкой и нежным центром',
+    name: 'BASQUE CHEESECAKE',
+    description: 'Basque-style cheesecake with a caramelized crust and creamy center',
     price: 390,
     category: 'specialty',
     image: '/data/menu/ЧИЗКЕЙК САН-САБАСТЬЯН/image_1.png'
   },
   {
     id: 'pistachio-knafe',
-    name: 'ФИСТАШКОВЫЙ КНАФЕ',
-    description: 'Восточная сладость с хрустящим тестом кадаиф и фисташками',
+    name: 'PISTACHIO KNAFEH',
+    description: 'A Middle Eastern delicacy with crispy kadaif pastry and pistachios',
     price: 700,
     category: 'specialty',
     image: '/data/menu/ФИСТАШКОВЫЙ КНАФЕ/image_1.png'
   },
   {
     id: 'date-dessert',
-    name: 'ФИНИКОВЫЙ ДЕСЕРТ',
-    description: 'Изысканный десерт на основе натуральных фиников с орехами',
+    name: 'DATE DESSERT',
+    description: 'An exquisite dessert made with natural dates and nuts',
     price: 380,
     category: 'specialty',
     image: '/data/menu/ФИНИКОВЫЙ ДЕСЕРТ/image_1.png'

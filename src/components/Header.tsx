@@ -48,7 +48,7 @@ export default function Header() {
           href="#hero"
           className="header__logo"
           onClick={handleLogoClick}
-          aria-label="На главную"
+          aria-label="Go to home"
         >
           <img src="/data/logo.png" alt="ChocoDips" />
         </a>
@@ -62,28 +62,28 @@ export default function Header() {
             onClick={() => scrollToSection('menu')}
             tabIndex={isMobileMenuOpen ? 0 : -1}
           >
-            Меню
+            Menu
           </button>
           <button
             className="header__nav-link"
             onClick={() => scrollToSection('about')}
             tabIndex={isMobileMenuOpen ? 0 : -1}
           >
-            О нас
+            About
           </button>
           <button
             className="header__nav-link"
             onClick={() => scrollToSection('location')}
             tabIndex={isMobileMenuOpen ? 0 : -1}
           >
-            Контакты
+            Contact
           </button>
         </nav>
 
         <button
           className={`header__burger ${isMobileMenuOpen ? 'header__burger--active' : ''}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label={isMobileMenuOpen ? 'Закрыть меню' : 'Открыть меню'}
+          aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={isMobileMenuOpen}
         >
           <span></span>

@@ -26,8 +26,8 @@ export default function MenuSection() {
             </svg>
             <span className="menu-section__line"></span>
           </div>
-          <h2 className="menu-section__title">Наше меню</h2>
-          <p className="menu-section__subtitle">Авторские десерты ручной работы</p>
+          <h2 className="menu-section__title">Our Menu</h2>
+          <p className="menu-section__subtitle">Handcrafted signature desserts</p>
         </header>
 
         <CategoryFilter

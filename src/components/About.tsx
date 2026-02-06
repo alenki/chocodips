@@ -31,18 +31,18 @@ export default function About() {
                 </svg>
                 <span className="about__line"></span>
               </div>
-              <h2 className="about__title">О нас</h2>
+              <h2 className="about__title">About Us</h2>
             </header>
 
             <div className="about__body">
               <p>
-                <strong>ChocoDips</strong> — это уютное пространство в сердце Нальчика, где шоколад становится искусством. Каждый наш десерт создаётся с любовью и вниманием к деталям.
+                <strong>ChocoDips</strong> is a cozy space in the heart of Nalchik where chocolate becomes art. Each of our desserts is crafted with love and attention to detail.
               </p>
               <p>
-                Мы верим, что хороший десерт — это больше, чем просто сладость. Это момент радости, который вы делите с близкими. Наши крепы, панкейки и авторские десерты готовятся из лучших ингредиентов специально для вас.
+                We believe that a great dessert is more than just something sweet. It's a moment of joy you share with loved ones. Our crepes, pancakes, and signature desserts are made from the finest ingredients just for you.
               </p>
               <p>
-                Приходите насладиться атмосферой уюта и попробовать наши фирменные шоколадные творения. Мы всегда рады гостям!
+                Come enjoy our warm atmosphere and taste our signature chocolate creations. We're always happy to welcome guests!
               </p>
             </div>
           </div>

@@ -20,29 +20,29 @@ export default function Footer() {
           <div className="footer__content">
             {/* Brand section */}
             <div className="footer__brand">
-              <a href="#hero" className="footer__logo-link" aria-label="На главную">
+              <a href="#hero" className="footer__logo-link" aria-label="Go to home">
                 <img
                   src="/data/logo_footer.png"
                   alt="ChocoDips"
                   className="footer__logo-img"
                 />
               </a>
-              <p className="footer__tagline">Шоколадные десерты с душой</p>
+              <p className="footer__tagline">Chocolate desserts with soul</p>
             </div>
 
             {/* Center - Address */}
             <div className="footer__center">
               <div className="footer__address">
-                <p className="footer__address-label">Адрес</p>
+                <p className="footer__address-label">Address</p>
                 <p className="footer__address-text">
-                  ул. Пушкина, 85а
+                  Pushkin St., 85a
                 </p>
                 <span className="footer__address-city">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                     <circle cx="12" cy="10" r="3"/>
                   </svg>
-                  Нальчик
+                  Nalchik
                 </span>
               </div>
               <div className="footer__divider" aria-hidden="true">
@@ -54,7 +54,7 @@ export default function Footer() {
 
             {/* Social & contact */}
             <div className="footer__connect">
-              <p className="footer__social-label">Мы в соцсетях</p>
+              <p className="footer__social-label">Follow us</p>
               <a
                 href="https://instagram.com/chocodips.ru"
                 target="_blank"
