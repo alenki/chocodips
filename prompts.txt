@@ -1,0 +1,4 @@
+Let us start planning this website for the ChocoDips cafe. It is a dessert cafe with a lot of chocolate in it's desserts. It have a cute minimalistic    
+  vibe and style. It's color pallete is perfectly represented in it's logo which I sent you. Now by analyzing their current menu website made with         
+  taplink: https://taplink.cc/desserts07?tpclid=facebook.PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnCebykfRFEldqHQ56hpnvlaeS41SYbF4e0TFixUrHGf  
+  _TWD3BiJCZqxnB_64_aem_FkKloF1laOaXSHcTHd_ZwA. And their instagram: https://www.instagram.com/chocodips.ru/?hl=en. Let us create a plan for this website    that we're going to develop for them. Use the frontend-design and think deeply for this. 
