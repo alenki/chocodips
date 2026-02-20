@@ -1,0 +1,89 @@
+.about {
+  background:
+    radial-gradient(ellipse at 50% 40%, var(--ganache) 0%, var(--cacao) 70%);
+  color: var(--biscuit);
+  padding: 6rem clamp(1.5rem, 4vw, 3rem);
+  position: relative;
+  overflow: hidden;
+  scroll-margin-top: var(--nav-height);
+}
+
+/* Subtle noise texture via pseudo */
+.about::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  pointer-events: none;
+}
+
+.about__inner {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.about__label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--caramel);
+  margin-bottom: 1rem;
+}
+
+.about__heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  color: var(--cream);
+  margin-bottom: 2.5rem;
+}
+
+.about__text {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--biscuit);
+  margin-bottom: 1.5rem;
+}
+
+.about__text:last-child {
+  margin-bottom: 0;
+}
+
+/* Decorative floating images */
+.about__decor {
+  position: absolute;
+  border-radius: 12px;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.about__decor--1 {
+  width: 160px;
+  top: 10%;
+  right: -40px;
+  transform: rotate(8deg);
+}
+
+.about__decor--2 {
+  width: 120px;
+  bottom: 15%;
+  left: -30px;
+  transform: rotate(-6deg);
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 1.5rem;
+  }
+
+  .about__decor {
+    display: none;
+  }
+}

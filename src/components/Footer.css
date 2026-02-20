@@ -1,0 +1,69 @@
+.footer {
+  background: var(--cacao);
+  color: var(--biscuit);
+  padding: 4rem clamp(1.5rem, 4vw, 3rem) 2rem;
+  text-align: center;
+  position: relative;
+  clip-path: polygon(0 40px, 100% 0, 100% 100%, 0 100%);
+  margin-top: -1px;
+}
+
+.footer__logo {
+  width: 160px;
+  margin: 0 auto 1.5rem;
+}
+
+.footer__tagline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--cream);
+  margin-bottom: 0.75rem;
+}
+
+.footer__address {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--biscuit);
+}
+
+.footer__instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--caramel);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.25s ease;
+  margin-bottom: 2.5rem;
+}
+
+.footer__instagram:hover {
+  color: var(--caramel-light);
+}
+
+.footer__instagram svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer__bottom {
+  border-top: 1px solid var(--truffle);
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--biscuit);
+  flex-wrap: wrap;
+}
+
+.footer__bottom a {
+  color: var(--caramel);
+  transition: color 0.25s ease;
+}
+
+.footer__bottom a:hover {
+  color: var(--caramel-light);
+}

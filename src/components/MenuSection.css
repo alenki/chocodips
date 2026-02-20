@@ -1,0 +1,60 @@
+.menu-section {
+  padding: 5rem clamp(1.5rem, 4vw, 3rem);
+  background: linear-gradient(180deg, var(--cream) 0%, var(--latte) 40%, var(--cream) 100%);
+  scroll-margin-top: var(--nav-height);
+}
+
+.menu-section__header {
+  max-width: 1200px;
+  margin: 0 auto 1.5rem;
+}
+
+.menu-section__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--ganache);
+  margin-bottom: 0.4rem;
+}
+
+.menu-section__subtitle {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--biscuit);
+}
+
+.menu-section__filters {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-section__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Featured cards span 2 rows */
+.menu-section__grid .menu-card--featured {
+  grid-row: span 2;
+}
+
+@media (max-width: 680px) {
+  .menu-section__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .menu-section__grid .menu-card--featured {
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 420px) {
+  .menu-section__grid {
+    grid-template-columns: 1fr;
+  }
+}

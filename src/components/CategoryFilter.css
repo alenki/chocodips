@@ -1,0 +1,45 @@
+.category-filter {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.category-filter::-webkit-scrollbar {
+  display: none;
+}
+
+.category-filter__pill {
+  flex-shrink: 0;
+  padding: 0.55rem 1.3rem;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.category-filter__pill--inactive {
+  background: var(--latte);
+  color: var(--ganache);
+}
+
+.category-filter__pill--inactive:hover {
+  background: var(--biscuit);
+  color: var(--cacao);
+}
+
+.category-filter__pill--active {
+  background: var(--caramel);
+  color: var(--cream);
+}
+
+.category-filter__pill--active:hover {
+  background: var(--caramel-light);
+}
