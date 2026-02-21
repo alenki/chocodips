@@ -1,12 +1,6 @@
-Let us start planning this website for the ChocoDips cafe. It is a dessert cafe with a lot of chocolate in it's desserts. It have a cute minimalistic    
-  vibe and style. It's color pallete is perfectly represented in it's logo which I sent you. Now by analyzing their current menu website made with         
-  taplink: https://taplink.cc/desserts07?tpclid=facebook.PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnCebykfRFEldqHQ56hpnvlaeS41SYbF4e0TFixUrHGf  
-  _TWD3BiJCZqxnB_64_aem_FkKloF1laOaXSHcTHd_ZwA. And their instagram: https://www.instagram.com/chocodips.ru/?hl=en. 
+Let us start planning this website for the ChocoDips cafe. It is a dessert cafe with a lot of chocolate in it's desserts. It have a cute minimalistic vibe and style. It's color pallete is perfectly represented in it's logo which I sent you. Now by analyzing their current menu website made with taplink: https://taplink.cc/desserts07?tpclid=facebook.PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnCebykfRFEldqHQ56hpnvlaeS41SYbF4e0TFixUrHGf_TWD3BiJCZqxnB_64_aem_FkKloF1laOaXSHcTHd_ZwA. And their instagram: https://www.instagram.com/chocodips.ru/?hl=en. 
 
-  This is a site i've made for it before: https://chocodips.netlify.app/. But now I need to redesign it because that design now belongs to another cafe.   
-  Either way, use the style and design of this website (https://chocodips.netlify.app/) as inspiration for the new website we are gonna make now. The      
-  website has to look really well with the style of the cafe. I want when people go to this site, they want to eat what is on the screen, they really      
-  want to go to this cafe. Make the absolute best you can physically make.                                                                                 
-  Use the frontend-design skill and playwright if needed. Keep in mind the frontend aesthetics idea in @README.md. Make me an award winning website.  
-  Let us create a plan for this website that we're going to develop for them. All required data (images) is in @public/data.
+Start planning the main page of the website, specifically, the hero section.
+
+Use the frontend-design skill and playwright if needed. Keep in mind the frontend aesthetics idea in @README.md. Make me an award winning design. All required data (images) is in @public/data.
  
