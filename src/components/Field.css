@@ -1,0 +1,243 @@
+/* ==========================================================================
+   FORM FIELDS — underline-only, tuned for the dark chocolate slabs
+   ========================================================================== */
+
+.fld {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.fld--wide {
+  grid-column: 1 / -1;
+}
+
+.fld__label {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7em;
+  color: rgba(247, 240, 226, 0.5);
+  margin-bottom: 0.85em;
+  transition: color 0.35s var(--e-out);
+}
+
+.fld__hint {
+  color: rgba(247, 240, 226, 0.3);
+  letter-spacing: 0.12em;
+  text-transform: none;
+  font-size: 0.625rem;
+}
+
+.fld__input {
+  width: 100%;
+  padding: 0.75em 0 0.85em;
+  background: transparent;
+  color: var(--cream);
+  font-family: var(--f-body);
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(247, 240, 226, 0.22);
+  border-radius: 0;
+  transition: border-color 0.4s var(--e-out), background-color 0.4s var(--e-out);
+}
+
+.fld__input::placeholder {
+  color: rgba(247, 240, 226, 0.3);
+}
+
+.fld__input:hover {
+  border-bottom-color: rgba(247, 240, 226, 0.4);
+}
+
+.fld__input:focus {
+  outline: none;
+  border-bottom-color: var(--molten);
+}
+
+.fld:focus-within .fld__label {
+  color: var(--molten-hi);
+}
+
+.fld__input--area {
+  resize: vertical;
+  min-height: 7.5em;
+}
+
+/* ---- select ------------------------------------------------------------- */
+
+.fld__selwrap {
+  position: relative;
+}
+
+.fld__input--sel {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 2em;
+  cursor: pointer;
+}
+
+.fld__input--sel option {
+  background: var(--cocoa-800);
+  color: var(--cream);
+}
+
+.fld__chev {
+  position: absolute;
+  right: 0.2em;
+  top: 50%;
+  translate: 0 -60%;
+  pointer-events: none;
+  color: var(--molten);
+  font-family: var(--f-ui);
+  font-size: 0.85rem;
+}
+
+/* ---- validation --------------------------------------------------------- */
+
+.fld__msg {
+  display: block;
+  min-height: 1.45em;
+  margin-top: 0.5em;
+  font-family: var(--f-ui);
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--molten-hi);
+}
+
+.fld--err .fld__input {
+  border-bottom-color: var(--molten);
+}
+
+/* ---- drop rating -------------------------------------------------------- */
+
+.rate {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding-block: 0.35em 0.5em;
+}
+
+.rate__drop {
+  width: clamp(24px, 2.4vw, 30px);
+  padding: 0;
+  line-height: 0;
+  transition: transform 0.35s var(--e-out);
+}
+
+.rate__drop svg {
+  width: 100%;
+  height: auto;
+}
+
+.rate__drop path {
+  fill: transparent;
+  stroke: rgba(247, 240, 226, 0.35);
+  stroke-width: 1.4;
+  transition: fill 0.35s var(--e-out), stroke 0.35s var(--e-out);
+}
+
+.rate__drop:hover {
+  transform: translateY(-3px) scale(1.06);
+}
+
+.rate__drop.is-on path {
+  fill: var(--molten);
+  stroke: var(--molten);
+}
+
+/* ==========================================================================
+   FORM SHELL + WHATSAPP HAND-OFF PANEL
+   ========================================================================== */
+
+.frm {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.1rem, 2.2vw, 2.2rem) clamp(1.4rem, 3vw, 3rem);
+}
+
+.frm__actions {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 1.4rem;
+  margin-top: clamp(0.6rem, 1.4vw, 1.2rem);
+  padding-top: clamp(1.2rem, 2.4vw, 2rem);
+  border-top: 1px solid var(--rule-inv-soft);
+}
+
+.frm__legal {
+  font-size: var(--t-xs);
+  color: rgba(247, 240, 226, 0.4);
+  max-width: 40ch;
+  line-height: 1.55;
+}
+
+/* ---- ready panel -------------------------------------------------------- */
+
+.ready {
+  border: 1px solid var(--rule-inv-soft);
+  border-radius: var(--r-md);
+  padding: clamp(1.4rem, 3vw, 2.6rem);
+  background: rgba(247, 240, 226, 0.04);
+}
+
+.ready__h {
+  color: var(--cream);
+  font-size: clamp(1.6rem, 2.8vw, 2.6rem);
+  margin-bottom: 0.6rem;
+}
+
+.ready__note {
+  color: rgba(247, 240, 226, 0.66);
+  font-size: var(--t-sm);
+  line-height: 1.62;
+  max-width: 54ch;
+}
+
+.ready__pre {
+  margin-top: clamp(1.1rem, 2.2vw, 1.8rem);
+  padding: clamp(0.9rem, 1.8vw, 1.4rem);
+  background: rgba(27, 10, 5, 0.55);
+  border: 1px solid var(--rule-inv-soft);
+  border-radius: var(--r-sm);
+  color: rgba(247, 240, 226, 0.82);
+  font-family: var(--f-body);
+  font-size: var(--t-sm);
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.ready__btns {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.2rem;
+  margin-top: clamp(1.2rem, 2.4vw, 2rem);
+}
+
+.ready__or {
+  color: rgba(247, 240, 226, 0.45);
+  font-family: var(--f-ui);
+  font-size: var(--t-micro);
+  letter-spacing: var(--tr-label-tight);
+  text-transform: uppercase;
+}
+
+.ready__or a {
+  color: var(--molten-hi);
+}
+
+.ready__or a:hover {
+  color: var(--cream);
+}
+
+@media (max-width: 720px) {
+  .frm {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

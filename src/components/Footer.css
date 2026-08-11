@@ -1,69 +1,236 @@
-.footer {
-  background: var(--cacao);
-  color: var(--biscuit);
-  padding: 4rem clamp(1.5rem, 4vw, 3rem) 2rem;
-  text-align: center;
+/* ==========================================================================
+   FOOTER — the page drips into deep chocolate
+   ========================================================================== */
+
+.ft {
   position: relative;
-  clip-path: polygon(0 40px, 100% 0, 100% 100%, 0 100%);
-  margin-top: -1px;
-}
-
-.footer__logo {
-  width: 160px;
-  margin: 0 auto 1.5rem;
-}
-
-.footer__tagline {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-style: italic;
-  font-size: 1.1rem;
+  background: var(--cocoa-900);
   color: var(--cream);
-  margin-bottom: 0.75rem;
+  isolation: isolate;
+  overflow: clip;
 }
 
-.footer__address {
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  color: var(--biscuit);
+.ft::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(70% 55% at 6% 8%, rgba(228, 101, 44, 0.2), transparent 62%),
+    radial-gradient(60% 60% at 96% 96%, rgba(201, 130, 70, 0.16), transparent 60%);
 }
 
-.footer__instagram {
+.ft__ribbon {
+  padding-block: clamp(1.1rem, 2vw, 2rem);
+  border-bottom: 1px solid var(--rule-inv-soft);
+}
+
+.ft__inner {
+  padding-block: clamp(2.6rem, 5vw, 5rem) clamp(1.4rem, 2.4vw, 2.2rem);
+}
+
+.ft__grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.25fr;
+  gap: clamp(1.8rem, 4vw, 4rem);
+  align-items: start;
+}
+
+/* ---- brand block -------------------------------------------------------- */
+
+.ft__logo {
+  width: auto;
+  height: clamp(46px, 5vw, 72px);
+  margin-bottom: clamp(1.1rem, 2vw, 1.8rem);
+}
+
+.ft__credo {
+  display: block;
+  color: var(--molten);
+  margin-bottom: 0.9em;
+}
+
+.ft__tagline {
+  color: var(--cream);
+  max-width: 15ch;
+  text-transform: none;
+  font-size: clamp(1.5rem, 2.4vw, 2.5rem);
+  line-height: 1.06;
+}
+
+/* ---- columns ------------------------------------------------------------ */
+
+.ft__col {
+  display: flex;
+  flex-direction: column;
+}
+
+.ft__cap {
+  color: rgba(247, 240, 226, 0.44);
+  margin-bottom: 0.6em;
+}
+
+.ft__note {
+  font-size: var(--t-sm);
+  color: rgba(247, 240, 226, 0.32);
+  margin-bottom: 1.35em;
+  padding-bottom: 1.15em;
+  border-bottom: 1px solid var(--rule-inv-soft);
+}
+
+.ft__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.62em;
+}
+
+.ft__link {
+  position: relative;
+  display: inline-block;
+  font-size: var(--t-sm);
+  color: rgba(247, 240, 226, 0.78);
+  transition: color 0.35s var(--e-out), transform 0.4s var(--e-out);
+}
+
+.ft__link::before {
+  content: '';
+  position: absolute;
+  left: -0.85em;
+  top: 0.62em;
+  width: 4px;
+  height: 1px;
+  background: var(--molten);
+  opacity: 0;
+  transition: opacity 0.35s var(--e-out), width 0.35s var(--e-out);
+}
+
+.ft__link:hover {
+  color: var(--cream);
+  transform: translateX(0.5em);
+}
+
+.ft__link:hover::before {
+  opacity: 1;
+  width: 8px;
+}
+
+.ft__address,
+.ft__hours {
+  font-style: normal;
+  font-size: var(--t-sm);
+  color: rgba(247, 240, 226, 0.78);
+  line-height: 1.62;
+}
+
+.ft__hours {
+  margin-top: 1em;
+  color: rgba(247, 240, 226, 0.5);
+}
+
+.ft__hours-v {
+  color: var(--cream);
+  font-family: var(--f-ui);
+  font-size: var(--t-sm);
+  letter-spacing: 0.06em;
+}
+
+.ft__status {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  color: var(--caramel);
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: color 0.25s ease;
-  margin-bottom: 2.5rem;
+  gap: 0.6em;
+  margin-top: 1.05em;
+  font-family: var(--f-ui);
+  font-size: var(--t-micro);
+  letter-spacing: var(--tr-label-tight);
+  text-transform: uppercase;
+  color: rgba(247, 240, 226, 0.45);
 }
 
-.footer__instagram:hover {
-  color: var(--caramel-light);
+.ft__status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(247, 240, 226, 0.35);
+  flex: none;
 }
 
-.footer__instagram svg {
-  width: 18px;
-  height: 18px;
+.ft__status.is-open {
+  color: var(--caramel-soft);
 }
 
-.footer__bottom {
-  border-top: 1px solid var(--truffle);
-  padding-top: 1.5rem;
+.ft__status.is-open .ft__status-dot {
+  background: var(--molten);
+  animation: hd-pulse 2.8s var(--e-soft) infinite;
+}
+
+.ft__route {
+  margin-top: 1.5em;
+  align-self: flex-start;
+  color: var(--cream);
+}
+
+.ft__route:hover {
+  color: var(--molten);
+}
+
+/* ---- meta strip --------------------------------------------------------- */
+
+.ft__meta,
+.ft__base {
   display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  font-size: 0.8rem;
-  color: var(--biscuit);
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
   flex-wrap: wrap;
+  color: rgba(247, 240, 226, 0.4);
 }
 
-.footer__bottom a {
-  color: var(--caramel);
-  transition: color 0.25s ease;
+.ft__meta {
+  margin-top: clamp(2.4rem, 5vw, 4.4rem);
+  padding-top: clamp(1.1rem, 2vw, 1.6rem);
+  border-top: 1px solid var(--rule-inv-soft);
 }
 
-.footer__bottom a:hover {
-  color: var(--caramel-light);
+.ft__meta-mid {
+  color: var(--molten);
+}
+
+.ft__top {
+  transition: color 0.3s var(--e-out), transform 0.4s var(--e-out);
+}
+
+.ft__top:hover {
+  color: var(--cream);
+  transform: translateY(-2px);
+}
+
+.ft__base {
+  margin-top: clamp(0.9rem, 1.6vw, 1.4rem);
+  padding-top: clamp(0.9rem, 1.6vw, 1.4rem);
+  border-top: 1px solid var(--rule-inv-soft);
+  color: rgba(247, 240, 226, 0.3);
+}
+
+/* ---- responsive --------------------------------------------------------- */
+
+@media (max-width: 1080px) {
+  .ft__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1.8rem, 5vw, 3rem);
+  }
+  .ft__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .ft__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ft__meta,
+  .ft__base {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7em;
+  }
 }

@@ -1,0 +1,70 @@
+body.cursor-hidden,
+body.cursor-hidden * {
+  cursor: none !important;
+}
+
+/* Text entry keeps its native caret — the drop cursor cannot show where the
+   insertion point is, and losing the I-beam makes the forms feel broken. */
+body.cursor-hidden input,
+body.cursor-hidden textarea {
+  cursor: text !important;
+}
+
+body.cursor-hidden select {
+  cursor: pointer !important;
+}
+
+.cursor {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-cursor);
+  pointer-events: none;
+}
+
+.cursor__bead,
+.cursor__ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  translate: -50% -50%;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cursor__bead {
+  width: 7px;
+  height: 7px;
+  background: var(--cocoa-700);
+  box-shadow: 0 0 0 1px rgba(247, 240, 226, 0.35);
+}
+
+.cursor__ring {
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(90, 35, 24, 0.42);
+  mix-blend-mode: multiply;
+  transition: border-color 0.3s var(--e-out), background-color 0.3s var(--e-out);
+}
+
+.cursor__ring--link {
+  border-color: rgba(228, 101, 44, 0.75);
+  background: rgba(228, 101, 44, 0.07);
+}
+
+.cursor__ring--media {
+  border-color: transparent;
+  background: var(--molten);
+  mix-blend-mode: normal;
+  box-shadow: var(--shadow-molten);
+}
+
+.cursor__label {
+  font-family: var(--f-ui);
+  font-size: 0.625rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cream);
+  text-align: center;
+  line-height: 1.3;
+  max-width: 84px;
+}

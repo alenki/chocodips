@@ -1,36 +1,61 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { useMemo } from 'react';
+import { MapContainer, Marker, TileLayer, Tooltip, ZoomControl } from 'react-leaflet';
 import L from 'leaflet';
-import { cafeInfo } from '../data/cafeInfo';
-import 'leaflet/dist/leaflet.css';
+import { cafe } from '../data/cafe';
+import { useLocale } from '../i18n/context';
 import './CafeMap.css';
 
-const markerIcon = new L.Icon({
-  iconUrl: '/data/favicon.png',
-  iconSize: [32, 32],
-  iconAnchor: [16, 32],
-  popupAnchor: [0, -32],
-});
+/**
+ * OpenStreetMap tiles, warmed with a CSS filter so the map sits inside the
+ * cream/chocolate palette instead of fighting it.
+ */
+export function CafeMap() {
+  const { t, locale } = useLocale();
 
-export default function CafeMap() {
+  const icon = useMemo(
+    () =>
+      L.divIcon({
+        className: 'cmap__pin-wrap',
+        html: `<span class="cmap__pin"><span class="cmap__pin-core"></span></span>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 15],
+      }),
+    [],
+  );
+
   return (
-    <div className="cafe-map">
+    <div className="cmap" role="group" aria-label={t('home.find.mapAria')}>
       <MapContainer
-        center={cafeInfo.coords}
+        center={cafe.coords}
         zoom={16}
         scrollWheelZoom={false}
-        style={{ width: '100%', height: '100%' }}
+        zoomControl={false}
+        attributionControl={false}
+        className="cmap__canvas"
       >
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+          maxZoom={19}
+          detectRetina
         />
-        <Marker position={cafeInfo.coords} icon={markerIcon}>
-          <Popup>
-            <strong>{cafeInfo.name}</strong><br />
-            {cafeInfo.address}
-          </Popup>
+        <ZoomControl position="bottomright" />
+        <Marker position={cafe.coords} icon={icon}>
+          <Tooltip direction="top" offset={[0, -14]} opacity={1} className="cmap__tip">
+            {cafe.name} · {cafe.street[locale]}
+          </Tooltip>
         </Marker>
       </MapContainer>
+
+      <span className="cmap__frame" aria-hidden="true" />
+
+      <a
+        className="cmap__credit"
+        href="https://www.openstreetmap.org/copyright"
+        target="_blank"
+        rel="noreferrer"
+      >
+        © OpenStreetMap
+      </a>
     </div>
   );
 }

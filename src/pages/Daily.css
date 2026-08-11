@@ -1,0 +1,246 @@
+/* ==========================================================================
+   DAILY — the journal
+   ========================================================================== */
+
+.dh {
+  position: relative;
+  padding-top: calc(var(--header-h) + clamp(2.6rem, 7vw, 7rem));
+  overflow: clip;
+}
+
+.dh__glow {
+  position: absolute;
+  top: -10%;
+  left: 42%;
+  width: min(70vw, 780px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(201, 130, 70, 0.2), transparent 66%);
+  filter: blur(30px);
+}
+
+.dh__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.dh__h {
+  margin: clamp(0.9rem, 1.8vw, 1.6rem) 0 clamp(1.6rem, 3vw, 2.8rem);
+  font-size: clamp(4rem, 15vw, 15rem);
+  line-height: 0.82;
+  text-transform: none;
+  letter-spacing: -0.02em;
+}
+
+.dh__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(1.4rem, 4vw, 4rem);
+  align-items: end;
+  padding-top: clamp(1.2rem, 2.2vw, 2rem);
+  border-top: 1px solid var(--rule);
+}
+
+.dh__lede {
+  max-width: 58ch;
+}
+
+.dh__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+  color: var(--ink-ghost);
+  white-space: nowrap;
+}
+
+.dh__meta-city {
+  color: var(--molten);
+}
+
+.dh__strip {
+  position: relative;
+  margin-top: clamp(2.2rem, 5vw, 5rem);
+  height: clamp(200px, 34vw, 460px);
+  overflow: hidden;
+}
+
+.dh__strip img {
+  width: 100%;
+  height: 122%;
+  object-fit: cover;
+  object-position: 50% 42%;
+  filter: saturate(1.04) contrast(1.02);
+  will-change: transform;
+}
+
+/* ----------------------------------------------------------------- ENTRIES */
+
+.ent {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  gap: clamp(1.8rem, 5vw, 5.5rem);
+  align-items: center;
+  padding-block: clamp(2.6rem, 6vw, 6rem);
+}
+
+.ent + .ent {
+  border-top: 1px solid var(--rule-soft);
+}
+
+.ent--1 .ent__figwrap {
+  order: 2;
+}
+
+.ent__fig {
+  border-radius: var(--r-sm);
+  box-shadow: var(--shadow-soft);
+  margin: 0;
+}
+
+.ent__kick {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  color: var(--ink-faint);
+}
+
+.ent__n {
+  color: var(--molten);
+  font-size: 0.75rem;
+}
+
+.ent__h {
+  margin: clamp(0.8rem, 1.5vw, 1.4rem) 0 clamp(1.1rem, 2vw, 1.8rem);
+  font-size: clamp(1.75rem, 3.5vw, 3.4rem);
+  text-wrap: balance;
+}
+
+.ent__body {
+  max-width: 58ch;
+}
+
+.ent__pull {
+  position: relative;
+  margin-top: clamp(1.4rem, 2.6vw, 2.2rem);
+  padding-left: clamp(1rem, 2vw, 1.8rem);
+  border-left: 2px solid var(--molten);
+}
+
+.ent__pull p {
+  text-transform: none;
+  font-size: clamp(1.15rem, 1.9vw, 1.75rem);
+  line-height: 1.16;
+  color: var(--ink);
+  max-width: 26ch;
+}
+
+.ents__break {
+  padding-block: clamp(1rem, 2vw, 2rem);
+}
+
+.ents__rule {
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, var(--rule), transparent);
+}
+
+/* ------------------------------------------------------------------- CREDO */
+
+.credo__inner {
+  padding-block: clamp(4.5rem, 9vw, 9rem) clamp(5rem, 9vw, 9.5rem);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.credo__h {
+  margin: clamp(1rem, 2vw, 1.8rem) 0 clamp(1.8rem, 3.2vw, 2.8rem);
+  font-size: clamp(2rem, 5vw, 5.4rem);
+  color: var(--cream);
+  max-width: 20ch;
+  text-wrap: balance;
+}
+
+/* ------------------------------------------------------------------- ESSAY */
+
+.essay__head {
+  margin-bottom: clamp(1.8rem, 3.6vw, 3.2rem);
+}
+
+.essay__h {
+  margin-top: clamp(0.8rem, 1.5vw, 1.3rem);
+  font-size: clamp(1.9rem, 4vw, 3.6rem);
+}
+
+.essay__grid {
+  columns: 4;
+  column-gap: clamp(0.7rem, 1.4vw, 1.4rem);
+}
+
+.essay__cell {
+  break-inside: avoid;
+  margin-bottom: clamp(0.7rem, 1.4vw, 1.4rem);
+  border-radius: var(--r-sm);
+  display: block;
+}
+
+.essay__cell:nth-child(3n) {
+  aspect-ratio: 3 / 4;
+}
+
+.essay__cell:nth-child(3n + 1) {
+  aspect-ratio: 1 / 1;
+}
+
+.essay__cell:nth-child(3n + 2) {
+  aspect-ratio: 4 / 5;
+}
+
+.essay__cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* -------------------------------------------------------------- RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .ent {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(1.4rem, 4vw, 2.4rem);
+  }
+
+  .ent--1 .ent__figwrap {
+    order: 0;
+  }
+
+  .ent__figwrap {
+    max-width: 480px;
+  }
+
+  .essay__grid {
+    columns: 3;
+  }
+}
+
+@media (max-width: 640px) {
+  .dh__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.3rem;
+  }
+
+  .dh__meta {
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .essay__grid {
+    columns: 2;
+  }
+}

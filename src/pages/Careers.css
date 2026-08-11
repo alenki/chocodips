@@ -1,0 +1,193 @@
+/* ==========================================================================
+   CAREERS
+   ========================================================================== */
+
+.ch {
+  position: relative;
+  padding-top: calc(var(--header-h) + clamp(2.6rem, 7vw, 6.5rem));
+  padding-bottom: clamp(2rem, 4vw, 4rem);
+  overflow: clip;
+}
+
+.ch__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(2rem, 5vw, 5.5rem);
+  align-items: center;
+}
+
+.ch__h {
+  margin: clamp(1rem, 1.8vw, 1.7rem) 0 clamp(1.3rem, 2.2vw, 2rem);
+  font-size: clamp(2.4rem, 5.6vw, 6rem);
+}
+
+.ch__lede {
+  max-width: 46ch;
+}
+
+.ch__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: clamp(1.4rem, 2.6vw, 2.2rem);
+  padding-top: clamp(1.1rem, 2vw, 1.6rem);
+  border-top: 1px solid var(--rule-soft);
+  color: var(--ink-faint);
+}
+
+.ch__dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--molten);
+}
+
+.ch__phone {
+  color: var(--ink);
+  transition: color 0.3s var(--e-out);
+}
+
+.ch__phone:hover {
+  color: var(--molten);
+}
+
+.ch__media .frame {
+  border-radius: var(--r-sm);
+  box-shadow: var(--shadow-soft);
+  margin: 0;
+}
+
+/* ------------------------------------------------------------------ VALUES */
+
+.vals__eyebrow {
+  margin-bottom: clamp(1.6rem, 3vw, 2.8rem);
+}
+
+.vals__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.4rem, 3vw, 3.4rem);
+  border-top: 1px solid var(--rule);
+  padding-top: clamp(1.4rem, 2.6vw, 2.4rem);
+}
+
+.vals__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding-right: clamp(0.5rem, 1.5vw, 1.6rem);
+  border-right: 1px solid var(--rule-soft);
+}
+
+.vals__card:last-child {
+  border-right: none;
+}
+
+.vals__n {
+  color: var(--molten);
+  font-size: 0.75rem;
+}
+
+.vals__t {
+  font-size: clamp(1.3rem, 2.1vw, 2rem);
+  text-wrap: balance;
+}
+
+.vals__d {
+  color: var(--ink-faint);
+  font-size: var(--t-sm);
+  line-height: 1.62;
+  max-width: 34ch;
+}
+
+/* -------------------------------------------------------------- FORM SLAB */
+
+.fsec {
+  position: relative;
+}
+
+.fsec__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(2rem, 5vw, 5.5rem);
+  align-items: start;
+  padding-block: clamp(4rem, 8vw, 8.5rem);
+}
+
+.fsec__h {
+  margin-top: clamp(0.9rem, 1.7vw, 1.5rem);
+  font-size: clamp(1.9rem, 3.6vw, 3.4rem);
+  color: var(--cream);
+  max-width: 14ch;
+}
+
+.fsec__aside {
+  margin-top: clamp(1.8rem, 3.4vw, 3rem);
+  border-top: 1px solid var(--rule-inv-soft);
+}
+
+/* The floor fits the widest label, "INSTAGRAM" tracked at 0.26em. */
+.fsec__row {
+  display: grid;
+  grid-template-columns: clamp(102px, 8vw, 122px) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: baseline;
+  padding-block: clamp(0.75rem, 1.4vw, 1.1rem);
+  border-bottom: 1px solid var(--rule-inv-soft);
+}
+
+.fsec__row dt {
+  color: rgba(247, 240, 226, 0.4);
+}
+
+.fsec__row dd {
+  color: rgba(247, 240, 226, 0.84);
+  font-size: var(--t-sm);
+  line-height: 1.5;
+}
+
+.fsec__row dd a {
+  transition: color 0.3s var(--e-out);
+}
+
+.fsec__row dd a:hover {
+  color: var(--molten-hi);
+}
+
+/* -------------------------------------------------------------- RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .ch__inner,
+  .fsec__inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ch__media {
+    max-width: 460px;
+  }
+
+  .vals__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .vals__card {
+    border-right: none;
+    border-bottom: 1px solid var(--rule-soft);
+    padding-block: clamp(1.2rem, 3vw, 1.8rem);
+  }
+
+  .vals__card:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .fsec__row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.4rem;
+  }
+}

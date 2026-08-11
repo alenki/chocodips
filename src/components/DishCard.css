@@ -1,0 +1,189 @@
+.dish {
+  position: relative;
+}
+
+.dish__hit {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0;
+}
+
+.dish__frame {
+  position: relative;
+  width: 100%;
+  border-radius: var(--r-sm);
+  background: var(--cream-3);
+  box-shadow: var(--shadow-soft);
+  transition: box-shadow 0.6s var(--e-out);
+}
+
+.dish--portrait .dish__frame {
+  aspect-ratio: 4 / 5;
+}
+
+.dish--tall .dish__frame {
+  aspect-ratio: 3 / 4;
+}
+
+.dish--square .dish__frame {
+  aspect-ratio: 1 / 1;
+}
+
+/* Scoped past `.frame img` in base.css, which would otherwise win on
+   specificity and drop `opacity` from the transition list — making the
+   two-photo cross-fade snap while the zoom glides. */
+.dish__frame .dish__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.04) contrast(1.02);
+  transition: transform 1.2s var(--e-out), opacity 0.75s var(--e-out);
+}
+
+.dish__frame .dish__img--hover {
+  opacity: 0;
+}
+
+.dish__hit:hover .dish__img,
+.dish__hit:focus-visible .dish__img {
+  transform: scale(1.055);
+}
+
+.dish__hit:hover .dish__img--hover,
+.dish__hit:focus-visible .dish__img--hover {
+  opacity: 1;
+}
+
+.dish__hit:hover .dish__frame {
+  box-shadow: var(--shadow-lift);
+}
+
+/* ---- corner marks ------------------------------------------------------- */
+
+.dish__n,
+.dish__tag,
+.dish__count,
+.dish__soon {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.dish__n {
+  top: 0.9rem;
+  left: 1rem;
+  color: rgba(253, 250, 243, 0.88);
+  mix-blend-mode: difference;
+  font-size: 0.625rem;
+  letter-spacing: 0.16em;
+}
+
+.dish__tag {
+  bottom: 1rem;
+  left: 1rem;
+  padding: 0.5em 0.85em;
+  background: rgba(27, 10, 5, 0.5);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  color: var(--cream);
+  border-radius: var(--r-pill);
+  font-size: 0.5625rem;
+  letter-spacing: 0.18em;
+}
+
+.dish__count {
+  bottom: 1.1rem;
+  right: 1rem;
+  color: rgba(253, 250, 243, 0.7);
+  font-size: 0.5625rem;
+  letter-spacing: 0.14em;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.4s var(--e-out), transform 0.4s var(--e-out);
+}
+
+.dish__hit:hover .dish__count {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- no-photo treatment ------------------------------------------------- */
+
+.dish--noshot .dish__frame {
+  background:
+    radial-gradient(120% 100% at 20% 0%, rgba(228, 101, 44, 0.24), transparent 60%),
+    linear-gradient(155deg, var(--cocoa-800), var(--cocoa-900));
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.dish__initial {
+  font-family: var(--f-display);
+  font-size: clamp(6rem, 16vw, 12rem);
+  line-height: 0.8;
+  color: rgba(247, 240, 226, 0.14);
+  text-transform: uppercase;
+  transition: transform 1.1s var(--e-out), color 0.6s var(--e-out);
+}
+
+.dish__hit:hover .dish__initial {
+  transform: scale(1.06);
+  color: rgba(228, 101, 44, 0.28);
+}
+
+.dish__soon {
+  bottom: 1.1rem;
+  left: 1rem;
+  color: rgba(247, 240, 226, 0.5);
+  font-size: 0.5625rem;
+  letter-spacing: 0.2em;
+}
+
+/* ---- text --------------------------------------------------------------- */
+
+.dish__foot {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.15rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.dish__name {
+  font-size: clamp(1.25rem, 1.75vw, 1.75rem);
+  line-height: 1;
+  color: var(--ink);
+  transition: color 0.4s var(--e-out);
+  text-wrap: balance;
+}
+
+.dish__name--en {
+  letter-spacing: 0.005em;
+}
+
+.dish__hit:hover .dish__name {
+  color: var(--molten);
+}
+
+.dish__price {
+  color: var(--ink-soft);
+  font-size: clamp(1.05rem, 1.35vw, 1.3rem);
+}
+
+.dish__desc {
+  margin-top: 0.85rem;
+  font-size: var(--t-sm);
+  line-height: 1.58;
+  color: var(--ink-faint);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

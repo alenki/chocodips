@@ -1,0 +1,123 @@
+/* ==========================================================================
+   CHOCODIPS — DESIGN TOKENS
+   «Шоколадный регистр» / The Chocolatier's Register
+   Warm cream editorial patisserie. Chocolate ink, molten orange accent.
+   Palette derived directly from the brand logo.
+   ========================================================================== */
+
+:root {
+  /* ---- INK / COCOA ---------------------------------------------------- */
+  /* Contrast against --cream is checked: ink 15.1:1, ink-soft 9.2:1,
+     ink-faint 4.6:1 (AA for body text), ink-ghost 3.2:1 (marks and numerals
+     only — never a control, never a sentence). */
+  --ink: #2a1109; /* primary text on cream */
+  --ink-soft: #58382a; /* secondary text */
+  --ink-faint: #87664f; /* meta, captions */
+  --ink-ghost: #9c8069; /* hairline labels, register numerals */
+
+  --cocoa-900: #1b0a05; /* darkest — molten sections */
+  --cocoa-850: #24100a;
+  --cocoa-800: #2e120a;
+  --cocoa-700: #5a2318; /* BRAND brown (logo wordmark) */
+  --cocoa-600: #7a3620;
+  --cocoa-500: #96502e;
+
+  /* ---- CARAMEL / MOLTEN ---------------------------------------------- */
+  --caramel: #c98246;
+  --caramel-soft: #e0ae7a;
+  --molten: #e4652c; /* BRAND orange (logo "CHOCO") */
+  --molten-hi: #f5904f;
+  --molten-deep: #bf4718;
+
+  /* ---- CREAM / PAPER ------------------------------------------------- */
+  --cream: #f7f0e2; /* page background */
+  --cream-2: #efe5d2;
+  --cream-3: #e3d5bb;
+  --cream-4: #d4c1a1;
+  --paper: #fdfaf3; /* raised cards */
+
+  /* ---- SUPPORTING ACCENTS (used sparingly) --------------------------- */
+  --pistachio: #7c8b4b;
+  --berry: #a32b3e;
+
+  /* ---- SEMANTIC ------------------------------------------------------ */
+  --rule: rgba(42, 17, 9, 0.16);
+  --rule-soft: rgba(42, 17, 9, 0.09);
+  --rule-inv: rgba(247, 240, 226, 0.18);
+  --rule-inv-soft: rgba(247, 240, 226, 0.1);
+
+  /* ---- TYPEFACES ----------------------------------------------------- */
+  /* Oranienbaum — high-contrast Cyrillic Didone. Display only. */
+  --f-display: "Oranienbaum", "Times New Roman", Times, serif;
+  /* Yeseva One — heavy Didone. Emphasis words inside display lines. */
+  --f-display-heavy: "Yeseva One", "Times New Roman", Times, serif;
+  /* Alice — warm Cyrillic old-style serif. Body copy. */
+  --f-body: "Alice", Georgia, "Times New Roman", serif;
+  /* Tenor Sans — refined fashion sans. Micro-type, nav, buttons, meta. */
+  --f-ui: "Tenor Sans", "Helvetica Neue", Helvetica, sans-serif;
+
+  /* ---- FLUID TYPE SCALE ---------------------------------------------- */
+  --t-mega: clamp(3.6rem, 13.5vw, 15rem); /* hero word */
+  --t-giant: clamp(2.9rem, 8vw, 8.4rem); /* section display */
+  --t-xl: clamp(2.1rem, 4.6vw, 4.4rem);
+  --t-lg: clamp(1.65rem, 2.9vw, 2.7rem);
+  --t-md: clamp(1.25rem, 1.7vw, 1.6rem);
+  --t-body: clamp(1rem, 1.05vw, 1.125rem);
+  --t-sm: 0.9375rem;
+  --t-xs: 0.8125rem;
+  --t-micro: 0.6875rem;
+
+  /* ---- TRACKING ------------------------------------------------------ */
+  --tr-label: 0.26em;
+  --tr-label-tight: 0.16em;
+  --tr-display: -0.015em;
+
+  /* ---- SPACE --------------------------------------------------------- */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4rem;
+  --s-9: 6rem;
+  --s-10: 8rem;
+  --section-y: clamp(4.5rem, 9vw, 10rem);
+  --gutter: clamp(1.25rem, 4.5vw, 4.5rem);
+
+  /* ---- LAYOUT -------------------------------------------------------- */
+  --maxw: 1560px;
+  --maxw-text: 62ch;
+  --header-h: 76px;
+
+  /* ---- RADII / SHADOW ------------------------------------------------ */
+  --r-sm: 3px;
+  --r-md: 6px;
+  --r-pill: 999px;
+  --shadow-soft: 0 2px 10px rgba(42, 17, 9, 0.05), 0 18px 46px -18px rgba(42, 17, 9, 0.18);
+  --shadow-lift: 0 4px 14px rgba(42, 17, 9, 0.07), 0 40px 80px -28px rgba(42, 17, 9, 0.32);
+  --shadow-molten: 0 20px 60px -22px rgba(228, 101, 44, 0.55);
+
+  /* ---- MOTION -------------------------------------------------------- */
+  --e-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --e-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+  --e-soft: cubic-bezier(0.33, 1, 0.68, 1);
+  --d-fast: 0.22s;
+  --d-mid: 0.45s;
+  --d-slow: 0.9s;
+
+  /* ---- Z-INDEX -------------------------------------------------------
+     Bottom to top. The cursor sits above everything: it replaces the native
+     pointer, so it must never be painted under a dialog. */
+  --z-grain: 60;
+  --z-header: 70;
+  --z-menu: 80;
+  --z-header-open: 85; /* header above the overlay, so close stays clickable */
+  --z-peek: 88; /* cursor-bound menu preview */
+  --z-modal: 100;
+  --z-cursor: 110;
+}
+
+/* Chocolate sections set their own cream alphas locally (see .slab, .ft, .ov,
+   .fsec, .rsec, .mh). They share --rule-inv / --rule-inv-soft above. */

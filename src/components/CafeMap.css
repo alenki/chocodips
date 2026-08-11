@@ -1,20 +1,171 @@
-.cafe-map {
+.cmap {
+  position: relative;
   width: 100%;
-  height: 400px;
-  border-radius: 16px;
+  aspect-ratio: 4 / 3;
+  background: var(--cream-2);
   overflow: hidden;
-  filter: sepia(0.15) saturate(0.8) brightness(1.05);
-  border: 2px solid var(--latte);
+  border-radius: var(--r-sm);
+  box-shadow: var(--shadow-soft);
 }
 
-.cafe-map .leaflet-container {
+/* Placeholder shown until Leaflet is fetched — same box, warm shimmer. */
+.cmap--pending {
+  background:
+    linear-gradient(105deg, transparent 38%, rgba(253, 250, 243, 0.55) 50%, transparent 62%)
+      0 0 / 220% 100%,
+    var(--cream-2);
+  animation: cmap-shimmer 2.4s var(--e-soft) infinite;
+}
+
+@keyframes cmap-shimmer {
+  from {
+    background-position: 120% 0;
+  }
+  to {
+    background-position: -60% 0;
+  }
+}
+
+.cmap__canvas {
   width: 100%;
   height: 100%;
+  background: var(--cream-2);
 }
 
-@media (max-width: 768px) {
-  .cafe-map {
-    height: 300px;
-    border-radius: 12px;
+/* Warm the OSM tiles into the brand palette. */
+.cmap .leaflet-tile-pane {
+  filter: sepia(0.38) saturate(0.72) hue-rotate(-10deg) brightness(1.05) contrast(0.9);
+}
+
+.cmap__frame {
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(90, 35, 24, 0.22);
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 500;
+}
+
+/* Bottom-left: Leaflet's zoom control owns the bottom-right corner and its
+   .leaflet-bottom sits at z-index 1000, so it would paint over this. */
+.cmap__credit {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  z-index: 600;
+  font-family: var(--f-ui);
+  font-size: 0.5625rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  background: rgba(253, 250, 243, 0.78);
+  padding: 0.35em 0.6em;
+  border-radius: var(--r-pill);
+  transition: color 0.3s var(--e-out);
+}
+
+.cmap__credit:hover {
+  color: var(--molten);
+}
+
+/* ---- pin ---------------------------------------------------------------- */
+
+.cmap__pin {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.cmap__pin::before,
+.cmap__pin::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid var(--molten);
+  animation: cmap-ping 2.6s var(--e-soft) infinite;
+}
+
+.cmap__pin::after {
+  animation-delay: 1.3s;
+}
+
+.cmap__pin-core {
+  position: relative;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--molten);
+  box-shadow: 0 0 0 4px rgba(253, 250, 243, 0.95), 0 6px 16px rgba(90, 35, 24, 0.4);
+}
+
+@keyframes cmap-ping {
+  0% {
+    transform: scale(0.45);
+    opacity: 0.9;
+  }
+  80%,
+  100% {
+    transform: scale(1.75);
+    opacity: 0;
+  }
+}
+
+/* ---- leaflet chrome overrides ------------------------------------------- */
+
+.cmap .leaflet-control-zoom {
+  border: none !important;
+  box-shadow: var(--shadow-soft);
+  margin: 0 18px 18px 0 !important;
+}
+
+.cmap .leaflet-control-zoom a {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  background: rgba(253, 250, 243, 0.94);
+  color: var(--ink);
+  border: none;
+  border-bottom: 1px solid var(--rule-soft);
+  font-family: var(--f-ui);
+  font-size: 1rem;
+  transition: background-color 0.3s var(--e-out), color 0.3s var(--e-out);
+}
+
+.cmap .leaflet-control-zoom a:hover {
+  background: var(--molten);
+  color: var(--cream);
+}
+
+.cmap .leaflet-tooltip.cmap__tip {
+  background: var(--cocoa-900);
+  color: var(--cream);
+  border: none;
+  border-radius: var(--r-pill);
+  padding: 0.55em 1em;
+  font-family: var(--f-ui);
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-lift);
+}
+
+.cmap .leaflet-tooltip.cmap__tip::before {
+  border-top-color: var(--cocoa-900);
+}
+
+@media (max-width: 700px) {
+  .cmap {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cmap__pin::before,
+  .cmap__pin::after {
+    animation: none;
+    opacity: 0;
   }
 }
